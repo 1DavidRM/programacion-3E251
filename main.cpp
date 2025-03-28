@@ -1,25 +1,38 @@
 #include "Serie.hpp"
+#include <ftxui/screen/screen.hpp>
+#include <ftxui/dom/elements.hpp>
+using namespace ftxui;
 
 
 int main(int argc, char const *argv[])
 {
+     auto pantalla = ftxui::Screen::Create(
+        Dimension::Full(),Dimension::Full()
+    );
+    
+    auto documento  = vbox(
+        spinner(21,1)
+    );
 
-Serie serienavidena;
+    Render(pantalla, documento);
+    pantalla.Print();
+    
 
-serienavidena.ApagarTodo();
-serienavidena.Imprimir();
-serienavidena.EncenderTodo();
-serienavidena.Imprimir();
-serienavidena.ApagarCantidad(8);
-serienavidena.Imprimir();
-serienavidena.EncenderCantidad(3);
-serienavidena.Imprimir();
-serienavidena.AlternarEncendido();
-serienavidena.Imprimir();
-serienavidena.RecorrerDerecha();
-serienavidena.Imprimir();
-serienavidena.RecorrerIzquierda();
-serienavidena.Imprimir();
+    // Serie serienavidena;
+    // serienavidena.ApagarTodo();
+    // serienavidena.Imprimir();
+    // serienavidena.EncenderTodo();
+    // serienavidena.Imprimir();
+    // serienavidena.ApagarCantidad(8);
+    // serienavidena.Imprimir();
+    // serienavidena.EncenderCantidad(3);
+    // serienavidena.Imprimir();
+    // serienavidena.AlternarEncendido();
+    // serienavidena.Imprimir();
+    // serienavidena.RecorrerDerecha();
+    // serienavidena.Imprimir();
+    // serienavidena.RecorrerIzquierda();
+    // serienavidena.Imprimir();
 
 
 
