@@ -1,0 +1,7 @@
+enum  EstadoFoco{
+Encendido,
+Apagado
+
+};
+
+
