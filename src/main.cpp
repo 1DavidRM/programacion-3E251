@@ -13,16 +13,27 @@ int main(int argc, char const *argv[])
      auto pantalla = ftxui::Screen::Create(
         Dimension::Full(),Dimension::Full()
     );
-    int fotograma = 0;
-    string resetPosition;
+
+    
+    float hi=5;
+
+   
+    // string resetPosition;
      while(true){
-      auto documento = vbox(
-        spinner(21, fotograma)
-      );
-      Render(pantalla, documento);
-      cout << resetPosition;
-      resetPosition = pantalla. ResetPosition();
-      pantalla.Print();
+      int fotograma = 0;
+      float t = fotograma/10;
+      float g = 9.81;
+      float desp=(g*t*t)/2;
+      float hf=hi-desp;
+      float hi=hf;
+      cout<<hf<<endl;
+      // auto documento = vbox(
+      //   spinner(21, fotograma)
+      // );
+      // Render(pantalla, documento);
+      // cout << resetPosition;
+      // resetPosition = pantalla. ResetPosition();
+      // pantalla.Print();
       fotograma++;
       std::this_thread::sleep_for(.04s);
      }
