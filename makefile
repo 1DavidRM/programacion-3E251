@@ -22,4 +22,10 @@ $(MEM):$(SRC)/memoria.cpp
 	c++ $< -o $@
 
 runm : $(MEM)
-	./$< 
+	./$<
+
+bin/archivo: src/archivo.cpp
+	c++ $< -o $@ -I$(INCLUDE)
+
+archivo: bin/archivo
+	./$<
