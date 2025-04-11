@@ -29,3 +29,9 @@ bin/archivo: src/archivo.cpp
 
 archivo: bin/archivo
 	./$<
+
+bin/binario: src/binario.cpp
+	c++ $< -o $@ -I$(INCLUDE)
+
+binario: bin/binario
+	./$<	
